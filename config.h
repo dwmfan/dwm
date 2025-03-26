@@ -27,16 +27,17 @@ static char *colors[][3] = {
 };
 
 /* tagging */
-static const char *tags[] = {"", "", "", "", };
+static const char *tags[] = {"", "", "", "", "", "", };
 
 static const Rule rules[] = {
 	/* xprop(1):
 	 *	WM_CLASS(STRING) = instance, class
 	 *	WM_NAME(STRING) = title
 	 */
-	/* class      instance    title       tags mask     isfloating   monitor */
-	{ "Gimp",     NULL,       NULL,       0,            1,           -1 },
-	{ "Firefox",  NULL,       NULL,       1 << 8,       0,           -1 },
+	/* class      		 instance    	 title       	tags mask     isfloating   	  monitor */
+    	{"discord",  		 NULL,       	 NULL,       	 1 << 4,       	   0,               -1},
+	{"telegram-desktop", 	 NULL, 		 NULL, 		 1 << 5, 	   0, 		    -1},
+	{"brave", 	 	 NULL, 		 NULL, 		 1 << 3, 	   0, 		    -1},
 };
 
 /* layout(s) */
@@ -132,4 +133,3 @@ static Button buttons[] = {
 	{ ClkTagBar,            MODKEY,         Button1,        tag,            {0} },
 	{ ClkTagBar,            MODKEY,         Button3,        toggletag,      {0} },
 };
-
